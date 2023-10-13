@@ -63,7 +63,7 @@ public class Game {
             guessWord += '-';
         }
         int count = 0;
-        System.out.println("Guess which word is hidden and you have 10 times to guess wrong!");
+        System.out.println("Guess which word is hidden and you have 16 times to guess wrong!");
         System.out.println("Good Luck!! ^^");
         do {
             renderGame(count, guessWord);
@@ -73,11 +73,11 @@ public class Game {
             } else {
                 count++;
             }
-        } while (count <= 10 && !word.equals(guessWord));
+        } while (count <= 16 && !word.equals(guessWord));
 
         renderGame(count, guessWord);
 
-        if (count > 10) {
+        if (count > 16) {
             won = false;
             displayFinalGame(won, word);
         } else {
